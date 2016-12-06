@@ -1,3 +1,4 @@
-gerenciador\services\GerenciadorService.class
+gerenciador\models\responses\GetTabelasResponse.class
+gerenciador\models\Tabela.class
 gerenciador\models\Coluna.class
-gerenciador\models\ReceberTabela.class
+gerenciador\services\GerenciadorService.class

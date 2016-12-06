@@ -3,19 +3,21 @@ package gerenciador.models;
 import java.util.List;
 
 public class Tabela {
-	private Integer id;
+	private Byte id;
 	private String nome;
 	private List<Coluna> colunas;
+	private byte[] indices;
+	private Integer qtdIndices;
 	
 	public Tabela() {
 		super();
 	}
 
-	public Integer getId() {
+	public Byte getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Byte id) {
 		this.id = id;
 	}
 
@@ -34,4 +36,24 @@ public class Tabela {
 	public void setColunas(List<Coluna> colunas) {
 		this.colunas = colunas;
 	}
+	
+	public void addColuna(Coluna coluna) {
+		this.colunas.add(coluna);
+	}
+
+	public byte[] getIndices() {
+		return indices;
+	}
+
+	public void setIndices(byte[] indices) {
+		this.indices = indices;
+	}
+
+	public Integer getQtdIndices() {
+		return qtdIndices;
+	}
+
+	public void setQtdIndices(Integer qtdIndices) {
+		this.qtdIndices = qtdIndices;
+	}	
 }
