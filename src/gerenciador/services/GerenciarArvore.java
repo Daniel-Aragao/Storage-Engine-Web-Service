@@ -27,7 +27,7 @@ public class GerenciarArvore {
 	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public GetNohResponse getOrdem(@QueryParam("id") Integer type) {
+	public GetNohResponse getArvore(@QueryParam("id") Integer type) {
 		GerenciadorIndice gi = new GerenciadorIndice();
 		GerenciadorArquivos ga = new GerenciadorArquivos();
 		GerenciadorBuffer gb = new GerenciadorBuffer();
