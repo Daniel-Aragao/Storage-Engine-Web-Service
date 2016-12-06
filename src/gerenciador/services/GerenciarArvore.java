@@ -6,6 +6,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import gerenciador.GerenciadorArquivos;
 import gerenciador.GerenciadorBuffer;
@@ -27,12 +28,12 @@ public class GerenciarArvore {
 	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public GetNohResponse getArvore(@QueryParam("id") Integer type) {
+	public Response getArvore(@QueryParam("id") Integer type) {
 		GerenciadorIndice gi = new GerenciadorIndice();
 		GerenciadorArquivos ga = new GerenciadorArquivos();
 		GerenciadorBuffer gb = new GerenciadorBuffer();
 		
-		GetNohResponse response = new GetNohResponse();
+		GetNohResponse node = new GetNohResponse();
 		
 		IArquivo indice = ga.getArquivo(type.byteValue());
 		
@@ -40,12 +41,21 @@ public class GerenciarArvore {
 			Node raiz = gi.getRaiz(indice);
 			Noh noh = montarNoh(gb, raiz);
 			
-			response.setNoh(noh);
+			node.setNoh(noh);
 		}
-		
-		return response;
+		//print(response.getNoh());
+		System.out.println(node);
+		return Response.ok(node).build();
 	}
 	
+	private void print(Noh noh) {
+		System.out.println(noh);
+		for(Noh n : noh.getNos()){
+			print(noh);
+		}
+		
+	}
+
 	private Noh montarNoh(GerenciadorBuffer gb, Node raiz){
 		Noh retorno = new Noh();
 		

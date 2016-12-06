@@ -37,4 +37,10 @@ public class Noh {
 		nohs.add(montarNoh);
 		
 	}
+	
+	@Override
+	public String toString(){
+		String retorno = this.chaves.get(0).toString();
+		return retorno;
+	}
 }

@@ -19,4 +19,10 @@ public class Chave {
 		this.dado = dado;
 	}
 	
+	@Override
+	public String toString(){
+		String retorno = dado.toString();
+		return retorno;
+	}
+	
 }
