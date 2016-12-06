@@ -30,7 +30,7 @@ public class GerenciarIndice {
 		GetOrdemResponse response = null;
 		try {
 			descricoes = createDescricoes(tabela.getColunas());
-			int ordem = gerenciadorIndice.CriarIndice(tabela.getId(), descricoes, tabela.getNome());
+			int ordem = gerenciadorIndice.CriarIndice(tabela.getQtdIndices().byteValue(), descricoes, tabela.getNome());
 			response = new GetOrdemResponse(ordem);
 			
 		} catch(IncorrectFormatException ex) {

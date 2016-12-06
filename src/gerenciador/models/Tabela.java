@@ -1,5 +1,6 @@
 package gerenciador.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Tabela {
@@ -11,6 +12,7 @@ public class Tabela {
 	
 	public Tabela() {
 		super();
+		colunas = new ArrayList<Coluna>();
 	}
 
 	public Byte getId() {

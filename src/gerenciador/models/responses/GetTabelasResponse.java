@@ -1,5 +1,6 @@
 package gerenciador.models.responses;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import gerenciador.models.Tabela;
@@ -9,6 +10,7 @@ public class GetTabelasResponse {
 
 	public GetTabelasResponse() {
 		super();
+		tabelas = new ArrayList<Tabela>();
 	}
 
 	public List<Tabela> getTabelas() {

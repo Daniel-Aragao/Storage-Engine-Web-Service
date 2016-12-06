@@ -1,4 +1,9 @@
+gerenciador\services\GerenciarChaveDeBusca.class
+gerenciador\models\ChaveDeBusca.class
 gerenciador\models\responses\GetTabelasResponse.class
 gerenciador\models\Tabela.class
 gerenciador\models\Coluna.class
-gerenciador\services\GerenciadorService.class
+gerenciador\models\responses\GetOrdemResponse.class
+gerenciador\services\GerenciarTabela.class
+gerenciador\models\responses\GetBuscaResponse.class
+gerenciador\services\GerenciarIndice.class
